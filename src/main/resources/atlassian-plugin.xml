@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+	<plugin-info>
+		<description>${project.description}</description>
+		<version>${project.version}</version>
+		<vendor name="${project.organization.name}" url="${project.organization.url}"/>
+		<param name="plugin-icon">images/pluginIcon.png</param>
+		<param name="plugin-logo">images/pluginLogo.png</param>
+	</plugin-info>
+	<!-- add our i18n resource -->
+	<resource type="i18n" name="i18n" location="jira-keyboard-shortcuts"/>
+
+	<keyboard-shortcut name="Create branch" i18n-name-key="create-branch.name" key="create-branch">
+		<description key="create-branch.description">Create branch</description>
+		<order>10</order>
+		<shortcut>b</shortcut>
+		<operation type="click">#cta-create-branch</operation>
+		<context>issueaction</context>
+	</keyboard-shortcut>
+
+	<keyboard-shortcut name="Log work" i18n-name-key="logwork.name" key="logwork">
+		<description key="logwork.description">Log work</description>
+		<order>150</order>
+		<shortcut>w</shortcut>
+		<operation type="click">#log-work</operation>
+		<context>issueaction</context>
+	</keyboard-shortcut>
+</atlassian-plugin>
