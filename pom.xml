@@ -4,9 +4,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.michielroos</groupId>
 	<artifactId>jira-keyboard-shortcuts</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<organization>
-		<name>ℳichiel ℛoos</name>
+		<name>Michiel Roos</name>
 		<url>https://www.michielroos.com/</url>
 	</organization>
 	<name>jira-keyboard-shortcuts</name>
@@ -74,7 +74,7 @@
 		<plugins>
 			<plugin>
 				<groupId>com.atlassian.maven.plugins</groupId>
-				<artifactId>maven-jira-plugin</artifactId>
+				<artifactId>jira-maven-plugin</artifactId>
 				<version>${amps.version}</version>
 				<extensions>true</extensions>
 				<configuration>
@@ -92,7 +92,7 @@
 			 -->
 					<enableQuickReload>true</enableQuickReload>
 					<enableFastdev>false</enableFastdev>
-					<jvmArgs>-Xmx4096m -XX:MaxPermSize=4096m -Xms2048m -XX:PermSize=512m</jvmArgs>
+					<jvmArgs>-Xmx4096m -Xms2048m -XX:PermSize=512m</jvmArgs>
 					<!-- See here for an explanation of default instructions: -->
 					<!-- https://developer.atlassian.com/docs/advanced-topics/configuration-of-instructions-in-atlassian-plugins -->
 					<instructions>
@@ -131,8 +131,8 @@
 		</plugins>
 	</build>
 	<properties>
-		<jira.version>7.3.2</jira.version>
-		<amps.version>6.2.6</amps.version>
+		<jira.version>8.2.1</jira.version>
+		<amps.version>8.0.0</amps.version>
 		<atlassian.spring.scanner.version>1.2.13</atlassian.spring.scanner.version>
 		<!-- This key is used to keep the consistency between the key in atlassian-plugin.xml and the key to generate bundle. -->
 		<atlassian.plugin.key>${project.groupId}.${project.artifactId}</atlassian.plugin.key>
